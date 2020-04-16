@@ -2,6 +2,7 @@ package com.selenium.pages;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,6 +46,7 @@ public class AmazonPage {
 	}
 
 	public void clickOnImage() throws IOException, URISyntaxException {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		img_item.click();
 	}
 
